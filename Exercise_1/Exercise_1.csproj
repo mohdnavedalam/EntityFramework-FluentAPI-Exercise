@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40888D04-6252-429B-9D2E-D710932C0193}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Exercise_1</RootNamespace>
+    <AssemblyName>Exercise_1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityConfigurations\GenreConfiguration.cs" />
+    <Compile Include="EntityConfigurations\TagConfiguration.cs" />
+    <Compile Include="EntityConfigurations\VideoConfiguration.cs" />
+    <Compile Include="MovieRentalMigrations\202006202246236_AddColumnClassificationToTableVideo.cs" />
+    <Compile Include="MovieRentalMigrations\202006202246236_AddColumnClassificationToTableVideo.designer.cs">
+      <DependentUpon>202006202246236_AddColumnClassificationToTableVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieRentalMigrations\202008242040292_TableGenreColumnNameRequiredMaxLength.cs" />
+    <Compile Include="MovieRentalMigrations\202008242040292_TableGenreColumnNameRequiredMaxLength.designer.cs">
+      <DependentUpon>202008242040292_TableGenreColumnNameRequiredMaxLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieRentalMigrations\202008242052198_TableVideoColumnNameRequiredMaxLength.cs" />
+    <Compile Include="MovieRentalMigrations\202008242052198_TableVideoColumnNameRequiredMaxLength.designer.cs">
+      <DependentUpon>202008242052198_TableVideoColumnNameRequiredMaxLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieRentalMigrations\202008242100100_TableVideosColumnGenreIDNameChange.cs" />
+    <Compile Include="MovieRentalMigrations\202008242100100_TableVideosColumnGenreIDNameChange.designer.cs">
+      <DependentUpon>202008242100100_TableVideosColumnGenreIDNameChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieRentalMigrations\202008242155035_TableVideosColumnClassificationChangeType.cs" />
+    <Compile Include="MovieRentalMigrations\202008242155035_TableVideosColumnClassificationChangeType.designer.cs">
+      <DependentUpon>202008242155035_TableVideosColumnClassificationChangeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieRentalMigrations\202008242212572_AddTableTagSetRelationshipWithTableVideosRenameColumns.cs" />
+    <Compile Include="MovieRentalMigrations\202008242212572_AddTableTagSetRelationshipWithTableVideosRenameColumns.designer.cs">
+      <DependentUpon>202008242212572_AddTableTagSetRelationshipWithTableVideosRenameColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieRentalModel\Classification.cs" />
+    <Compile Include="MovieRentalMigrations\202006202230179_InitialModel.cs" />
+    <Compile Include="MovieRentalMigrations\202006202230179_InitialModel.designer.cs">
+      <DependentUpon>202006202230179_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieRentalMigrations\202006202233144_PopulateTableGenres.cs" />
+    <Compile Include="MovieRentalMigrations\202006202233144_PopulateTableGenres.designer.cs">
+      <DependentUpon>202006202233144_PopulateTableGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieRentalMigrations\202006202238599_VideoHasOneGenre.cs" />
+    <Compile Include="MovieRentalMigrations\202006202238599_VideoHasOneGenre.designer.cs">
+      <DependentUpon>202006202238599_VideoHasOneGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieRentalMigrations\Configuration.cs" />
+    <Compile Include="MovieRentalModel\Genre.cs" />
+    <Compile Include="MovieRentalModel\Tag.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MovieRentalModel\Video.cs" />
+    <Compile Include="MovieRentalModel\MovieRentalContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MovieRentalMigrations\202006202230179_InitialModel.resx">
+      <DependentUpon>202006202230179_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieRentalMigrations\202006202233144_PopulateTableGenres.resx">
+      <DependentUpon>202006202233144_PopulateTableGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieRentalMigrations\202006202238599_VideoHasOneGenre.resx">
+      <DependentUpon>202006202238599_VideoHasOneGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieRentalMigrations\202006202246236_AddColumnClassificationToTableVideo.resx">
+      <DependentUpon>202006202246236_AddColumnClassificationToTableVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieRentalMigrations\202008242040292_TableGenreColumnNameRequiredMaxLength.resx">
+      <DependentUpon>202008242040292_TableGenreColumnNameRequiredMaxLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieRentalMigrations\202008242052198_TableVideoColumnNameRequiredMaxLength.resx">
+      <DependentUpon>202008242052198_TableVideoColumnNameRequiredMaxLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieRentalMigrations\202008242100100_TableVideosColumnGenreIDNameChange.resx">
+      <DependentUpon>202008242100100_TableVideosColumnGenreIDNameChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieRentalMigrations\202008242155035_TableVideosColumnClassificationChangeType.resx">
+      <DependentUpon>202008242155035_TableVideosColumnClassificationChangeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieRentalMigrations\202008242212572_AddTableTagSetRelationshipWithTableVideosRenameColumns.resx">
+      <DependentUpon>202008242212572_AddTableTagSetRelationshipWithTableVideosRenameColumns.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
