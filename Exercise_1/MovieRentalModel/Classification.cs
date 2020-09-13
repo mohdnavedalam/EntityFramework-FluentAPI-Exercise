@@ -1,6 +1,6 @@
-﻿namespace Exercise_1
+﻿namespace Exercise_1.MovieRentalModel
 {
-    enum Classification : byte
+    public enum Classification : byte
     {
         Silver = 1,
         Gold = 2,
