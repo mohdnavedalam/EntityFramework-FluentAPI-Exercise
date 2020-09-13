@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity.ModelConfiguration;
+
 using Exercise_1.MovieRentalModel;
 
 namespace Exercise_1.EntityConfigurations

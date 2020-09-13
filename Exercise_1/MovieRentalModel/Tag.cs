@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Exercise_1.MovieRentalModel
 {
-    class Tag
+    public class Tag
     {
-        Tag()
+        public Tag()
         {
             Videos = new List<Video>();
         }
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public IList<Video> Videos { get; set; }
     }

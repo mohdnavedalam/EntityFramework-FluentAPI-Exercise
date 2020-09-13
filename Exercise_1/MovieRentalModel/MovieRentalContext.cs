@@ -1,9 +1,9 @@
 ﻿using System.Data.Entity;
 using Exercise_1.EntityConfigurations;
 
-namespace Exercise_1
+namespace Exercise_1.MovieRentalModel
 {
-    class MovieRentalContext : DbContext
+    public class MovieRentalContext : DbContext
     {
         public MovieRentalContext() : base("name=MovieRentalContext") { }
 

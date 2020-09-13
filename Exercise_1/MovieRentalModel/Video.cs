@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Exercise_1.MovieRentalModel;
 
-namespace Exercise_1
+namespace Exercise_1.MovieRentalModel
 {
-    class Video
+    public class Video
     {
         public Video()
         {

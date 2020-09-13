@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace Exercise_1
+namespace Exercise_1.MovieRentalModel
 {
-    class Genre
+    public class Genre
     {
         public Genre()
         {
